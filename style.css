@@ -1,0 +1,51 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+.container #taskList {
+    text-align: left;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+
+.input-container {
+    margin-top: 20px;
+}
+
+.input-container input[type='text'] {
+padding: 10px;
+font-size: 16px;
+width: 300px;
+border-radius: 5px;
+
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.done button.btnDone {
+margin: '5px'; 
+    backgroundColor: red;
+    borderRadius: 5px;
+    cursor: pointer;
+}
+
+/* #doneButton {
+    
+    margin: 5px; 
+    backgroundColor: red;
+    borderRadius: 5px;
+    cursor: pointer
+}  */
+
+
+
+//в четверг .  Сделать так, что б по нажатии на Done она меняла свой текст на Not Done при последующем нажатии такс должен становиться актуальным. 
