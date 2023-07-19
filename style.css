@@ -1,3 +1,7 @@
+body {
+    background-color: ;
+} 
+
 .container {
     text-align: center;
     margin-top: 50px;
@@ -38,13 +42,13 @@ margin: '5px';
     cursor: pointer;
 }
 
-/* #doneButton {
+ .doneButton {
     
     margin: 5px; 
-    backgroundColor: red;
-    borderRadius: 5px;
+    background-color: red;
+    border-radius: 5px;
     cursor: pointer
-}  */
+}  
 
 
 
