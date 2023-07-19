@@ -3,13 +3,15 @@ const addTaskButton = document.getElementById('addTask');
 const taskListOl = document.getElementById('taskList');
 const urlServer = 'https://jsonplaceholder.typicode.com/users/1/todos';
 
-
 function taskDone(li, doneButton) {
-    li.style.textDecoration = 'line-through';
-    doneButton.style.backgroundColor = 'green';
-    doneButton.innerHTML = 'Done';
+    li.classList.toggle('taskDone');
+    doneButton.classList.toggle('doneButton');
+if (doneButton.innerHTML === "Do it!") {
+    doneButton.innerHTML = "Done!"
+} else {
+    doneButton.innerHTML = "Do it!"
 }
-
+}
 
 taskFromURL();
 
@@ -20,17 +22,22 @@ function taskFromURL() {
         data.then((res) => {
             res.forEach(element => {
                 const task = document.createElement('li');
+                
                 task.textContent = element.title;
-
+                
                 const doneButton = document.createElement('button');
-
-                doneButton.classList.add('doneButton');
+                doneButton.classList.add('doItButton');
+               
                 doneButton.innerHTML = 'Do it!';
-
+                
                 taskListOl.append(task);
                 task.append(doneButton);
+                if (element.completed === false) {
+                    taskDone(task, doneButton)
+                }
+                
+                doneButton.addEventListener('click', () => taskDone(task, doneButton)); //Вынести в отдельную функцию и засунуть в taskDone ?
 
-                doneButton.addEventListener('click', () => taskDone(task, doneButton));
             });
         })
     })
@@ -47,7 +54,7 @@ function addTask() {
         taskListOl.append(li);
 
         const doneButton = document.createElement('button');
-        doneButton.classList.add('doneButton');
+        doneButton.classList.add('doItButton');
         doneButton.innerHTML = 'Do it!';
 
         li.append(doneButton);

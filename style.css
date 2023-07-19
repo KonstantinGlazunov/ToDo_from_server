@@ -1,6 +1,4 @@
-body {
-    background-color: ;
-} 
+
 
 .container {
     text-align: center;
@@ -35,15 +33,7 @@ border-radius: 5px;
     cursor: pointer;
 }
 
-.done button.btnDone {
-margin: '5px'; 
-    backgroundColor: red;
-    borderRadius: 5px;
-    cursor: pointer;
-}
-
- .doneButton {
-    
+ .doItButton { 
     margin: 5px; 
     background-color: red;
     border-radius: 5px;
@@ -51,5 +41,12 @@ margin: '5px';
 }  
 
 
+.doneButton {
+    background-color:   green; 
+}
 
-//в четверг .  Сделать так, что б по нажатии на Done она меняла свой текст на Not Done при последующем нажатии такс должен становиться актуальным. 
+
+.taskDone {
+    text-decoration: line-through;
+}
+
